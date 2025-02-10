@@ -11,23 +11,51 @@
             padding: 0;
             text-align: center;
         }
-        #home {
-            display: flex;
+        .page {
+            display: none;
+            height: 100vh;
             justify-content: center;
             align-items: center;
-            height: 100vh;
-            background-image: url('background.jpg'); /* Change to your image URL */
+            flex-direction: column;
+            padding: 20px;
+        }
+        #home {
+            display: flex;
+            background-image: url('https://i0.wp.com/thecaninebuddy.com/wp-content/uploads/2021/08/crying-cat-meme.jpg?w=2240&ssl=1'); /* Change to your image */
             background-size: cover;
             background-position: center;
             color: white;
             font-size: 30px;
         }
         #about {
-            display: none;
-            height: 100vh;
             background: linear-gradient(to right, red, yellow, black);
             color: white;
-            padding: 50px;
+        }
+        #profile, #achievements {
+            background-color: #f4f4f4;
+            color: black;
+        }
+        img {
+            width: 200px;
+            height: 250px;
+            border-radius: 10px;
+            object-fit: cover;
+        }
+        h1 {
+            font-size: 36px;
+            margin: 10px 0;
+        }
+        h2 {
+            font-size: 20px;
+            margin: 5px 0;
+        }
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+        ul li {
+            margin: 5px 0;
+            font-size: 18px;
         }
         .nav {
             position: absolute;
@@ -51,29 +79,50 @@
     <div class="nav">
         <button onclick="showPage('home')">Home</button>
         <button onclick="showPage('about')">About Me</button>
+        <button onclick="showPage('profile')">Profile</button>
+        <button onclick="showPage('achievements')">Achievements</button>
     </div>
 
-    <div id="home">
+    <div id="home" class="page" style="display: flex;">
         <h1 style="font-family: 'Courier New', monospace;">Information Technology Student Portfolio</h1>
     </div>
 
-    <div id="about">
+    <div id="about" class="page">
         <h1>About Me</h1>
         <p>Hello! I am an IT student passionate about coding and technology.</p>
         <p>I love solving problems and creating projects.</p>
         <p>My goal is to become a skilled developer in the future.</p>
     </div>
 
+    <div id="profile" class="page">
+        <img src="your-profile.jpg" alt="Your Profile Picture">
+        <h1><strong>Profile</strong></h1>
+        <h2>Full Name: Your Name</h2>
+        <h2>Email: your.email@example.com</h2>
+        <h2>Degree Program: Bachelor of Science in Information Technology</h2>
+        <h2>School: Your University</h2>
+    </div>
+
+    <div id="achievements" class="page">
+        <h1><strong>Achievements</strong></h1>
+        <img src="your-achievement-photo.jpg" alt="Your Achievement Photo">
+        <ul>
+            <li>🏆 Awarded Best IT Project 2024</li>
+            <li>🎓 Graduated with Honors</li>
+            <li>💻 Completed a Data Science Internship</li>
+            <li>📝 Published a Research Paper on AI</li>
+        </ul>
+    </div>
+
     <script>
         function showPage(page) {
-            document.getElementById('home').style.display = (page === 'home') ? 'flex' : 'none';
-            document.getElementById('about').style.display = (page === 'about') ? 'block' : 'none';
+            let pages = document.getElementsByClassName('page');
+            for (let i = 0; i < pages.length; i++) {
+                pages[i].style.display = 'none';
+            }
+            document.getElementById(page).style.display = 'flex';
         }
     </script>
 
 </body>
 </html>
-
-
-
-
