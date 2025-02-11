@@ -36,8 +36,8 @@
             color: black;
         }
         img {
-            width: 200px;
-            height: 250px;
+            max-width: 100%;
+            height: auto;
             border-radius: 10px;
             object-fit: cover;
         }
@@ -58,10 +58,13 @@
             font-size: 18px;
         }
         .nav {
-            position: absolute;
-            top: 10px;
+            position: fixed;
+            top: 0;
             left: 50%;
             transform: translateX(-50%);
+            background: rgba(0, 0, 0, 0.8);
+            padding: 10px;
+            border-radius: 10px;
         }
         .nav button {
             padding: 10px 20px;
@@ -89,28 +92,28 @@
 
     <div id="about" class="page">
         <h1>About Me</h1>
-        <p>Hello! I am Joel Abad a Grade 12-Stem SHS Student, interested in learning about coding and technology.</p>
-        <p>I love creating projects and creating websites.</p>
+        <p>Hello! I am Joel Abad, a Grade 12-STEM SHS Student, interested in learning about coding and technology.</p>
+        <p>I love creating projects and websites.</p>
         <p>My goal is to become a skilled Data Scientist in the future.</p>
     </div>
 
     <div id="profile" class="page">
-        <img src="https://github.com/soitmapuauniv/IT/blob/main/IMG_30642.jpg?raw=true" >
+        <img src="https://github.com/soitmapuauniv/IT/blob/main/IMG_30642.jpg?raw=true" alt="Profile Picture">
         <h1><strong>Profile</strong></h1>
-        <h2>Full Name: Joel Abad </h2>
+        <h2>Full Name: Joel Abad</h2>
         <h2>Email: jpabad@mymail.mapua.edu.ph</h2>
-        <h2>Degree/Program: Grade 12-STEM y</h2>
-        <h2>School: Mapua University </h2>
+        <h2>Degree/Program: Grade 12-STEM</h2>
+        <h2>School: Mapua University</h2>
     </div>
 
     <div id="achievements" class="page">
         <h1><strong>Achievements</strong></h1>
-        <img src="https://github.com/soitmapuauniv/IT/blob/main/IMG_30642.jpg?raw=true>
+        <img src="https://github.com/soitmapuauniv/IT/blob/main/IMG_30642.jpg?raw=true" alt="Achievement Image">
         <ul>
             <li>🏆 With Honors A.Y. 2019-2022</li>
-            <li>🎓 BEst in English</li>
+            <li>🎓 Best in English</li>
             <li>💻 Completed a Data Science Internship</li>
-            <li>📝 Published a Research Paper on The Effect of Screentime On The Academic Performance of Students</li>
+            <li>📝 Published a Research Paper on The Effect of Screentime on the Academic Performance of Students</li>
         </ul>
     </div>
 
