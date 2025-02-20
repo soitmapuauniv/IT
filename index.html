@@ -106,26 +106,30 @@
         <h2>School: Mapua University</h2>
     </div>
 
-    <div id="Work Immersion" class="page">
-        <h1><strong>Work Immersion</strong></h1>
-        <img src="https://github.com/soitmapuauniv/IT/blob/main/IMG_30642.jpg?raw=true" alt="Achievement Image">
-        <ul>
-            <li>🏆 With Honors A.Y. 2019-2022</li>
-            <li>🎓 Best in English</li>
-            <li>💻 Completed a Data Science Internship</li>
-            <li>📝 Published a Research Paper on The Effect of Screentime on the Academic Performance of Students</li>
-        </ul>
-    </div>
+    <div id="achievements" class="page">
+    <h1><strong>Work Immersion</strong></h1>
+    <img src="https://your-public-image-link.jpg" alt="Achievement Image">
+    <ul>
+        <li>🏆 With Honors A.Y. 2019-2022</li>
+        <li>🎓 Best in English</li>
+        <li>💻 Completed a Data Science Internship</li>
+        <li>📝 Published a Research Paper on The Effect of Screentime on the Academic Performance of Students</li>
+    </ul>
+</div>
 
-    <script>
-        function showPage(page) {
-            let pages = document.getElementsByClassName('page');
-            for (let i = 0; i < pages.length; i++) {
-                pages[i].style.display = 'none';
-            }
-            document.getElementById(page).style.display = 'flex';
+<script>
+    function showPage(page) {
+        let pages = document.getElementsByClassName('page');
+        for (let i = 0; i < pages.length; i++) {
+            pages[i].style.display = 'none';
         }
-    </script>
+        document.getElementById(page).style.display = 'flex';
+    }
+    
+    window.onload = function () {
+        showPage('home');
+    };
+</script>
 
 </body>
 </html>
